@@ -1,0 +1,25 @@
+version: '3.3'
+# docker-compose --compatibility up
+services:
+  dcard_crawler:
+    build:
+      context: ./image
+      dockerfile: dockerfile
+    image: iii/dcard_crawler-python3.8.3:v1.0
+    container_name: dcard_crawler
+    deploy:
+      resources:
+        limits:
+          cpus: '1.000'
+          memory: 1G
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1g"
+    environment:
+      TZ: "Asia/Taipei"
+      LANG: C.UTF-8
+      API_PROPERTY : "FORMALITY"
+    volumes:
+      - ./src:/app

@@ -1,0 +1,17 @@
+Flask
+Flask-APScheduler
+Flask-HTTPAuth
+Flask-SQLAlchemy
+Flask-WTF
+PyMySQL
+python-dateutil
+requests
+elasticsearch
+SQLAlchemy
+setuptools
+uWSGI
+Werkzeug
+WTForms
+sqlalchemy-utils
+dcard-spider
+psutil
